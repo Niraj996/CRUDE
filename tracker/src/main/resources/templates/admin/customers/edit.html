@@ -1,0 +1,35 @@
+<div th:replace="admin/shared/header"></div>
+<h1>Edit Customer</h1>
+<form action="/customers/save" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" th:value="${customer.name}" class="form-control" required placeholder="Enter Name"/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" name="address" class="form-control" th:value="${customer.address}" required/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" name="phone" class="form-control" th:value="${customer.phone}" required/>
+            </div>
+        </div>
+        
+    </div>
+    <hr/>
+    <div class="">
+        <input type="hidden" name="id" th:value="${customer.id}"/>
+        <button type="submit" class="btn btn-success">Save</button> 
+        <a href="/customers"  class="btn btn-danger btn-xs">Cancel</a>
+    </div>
+    
+</form>
+<div th:replace="admin/shared/footer"></div>

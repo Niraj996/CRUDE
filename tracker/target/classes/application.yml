@@ -1,0 +1,9 @@
+server:
+    port: 9010
+
+spring:
+    dataSource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost/springdb
+        username: root
+        password: 
